@@ -1,0 +1,49 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5c4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B3D2E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="250" cy="250" r="240" fill="#0A0A0A" stroke="#4CAF50" stroke-width="12" />
+  <circle cx="250" cy="250" r="225" fill="none" stroke="#4CAF50" stroke-width="2" opacity="0.5" />
+
+  <!-- Fields (Bottom) -->
+  <path d="M 60 350 Q 250 320 440 350 L 440 400 L 60 400 Z" fill="url(#fieldGrad)" />
+  <path d="M 100 355 L 80 400 M 150 345 L 140 400 M 200 340 L 200 400 M 250 338 L 250 400 M 300 340 L 310 400 M 350 345 L 410 400" stroke="#4CAF50" stroke-width="3" opacity="0.6" />
+
+  <!-- Drone Silhouette (Simplified) -->
+  <g transform="translate(250, 180) scale(1.5)">
+    <!-- Body -->
+    <rect x="-25" y="-15" width="50" height="30" rx="10" fill="#E0E0E0" />
+    <circle cx="0" cy="0" r="8" fill="#333" />
+    <!-- Arms -->
+    <line x1="-25" y1="-15" x2="-60" y2="-40" stroke="#E0E0E0" stroke-width="8" />
+    <line x1="25" y1="-15" x2="60" y2="-40" stroke="#E0E0E0" stroke-width="8" />
+    <line x1="-25" y1="15" x2="-60" y2="40" stroke="#E0E0E0" stroke-width="8" />
+    <line x1="25" y1="15" x2="60" y2="40" stroke="#E0E0E0" stroke-width="8" />
+    <!-- Rotors -->
+    <ellipse cx="-60" cy="-40" rx="30" ry="5" fill="rgba(255,255,255,0.2)" stroke="#FFF" stroke-width="1" />
+    <ellipse cx="60" cy="-40" rx="30" ry="5" fill="rgba(255,255,255,0.2)" stroke="#FFF" stroke-width="1" />
+    <ellipse cx="-60" cy="40" rx="30" ry="5" fill="rgba(255,255,255,0.2)" stroke="#FFF" stroke-width="1" />
+    <ellipse cx="60" cy="40" rx="30" ry="5" fill="rgba(255,255,255,0.2)" stroke="#FFF" stroke-width="1" />
+    <!-- Camera -->
+    <rect x="-8" y="15" width="16" height="12" rx="2" fill="#333" />
+  </g>
+
+  <!-- Text -->
+  <text x="250" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="65" fill="url(#textGrad)">DRONE</text>
+  <text x="250" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="65" fill="#4CAF50">AGRO</text>
+  
+  <!-- Slogan -->
+  <text x="250" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#FFF" letter-spacing="2">TECNOLOGIA QUE GERA LUCRO</text>
+  
+  <!-- Leaves (Bottom) -->
+  <path d="M 230 470 Q 240 450 250 470 Q 260 450 270 470 L 250 490 Z" fill="#4CAF50" />
+</svg>

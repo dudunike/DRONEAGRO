@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Lucro - Drone Agro</title>
+    <meta name="description" content="Descubra quanto você pode ganhar com drone no agro na sua região em apenas 2 minutos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1301485891947622');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1301485891947622&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><img src="logo.svg" alt="Drone Agro" style="height: 40px; vertical-align: middle;"></div>
+            <div class="badge-header">Oportunidade 2026</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="badge-header scroll-animate-up">Oportunidade 2026</span>
+                <h1 class="scroll-animate-up">Aprenda a pilotar drones do zero em <span>apenas um dia</span></h1>
+                <p class="scroll-animate-up">Descubra quanto você pode faturar no agronegócio e como dominar a tecnologia que está revolucionando o campo.</p>
+                <div class="scroll-animate-up">
+                    <button class="btn btn-primary btn-pulse" onclick="startQuiz()">COMEÇAR QUIZ AGORA</button>
+                    <span class="microcopy">Leva menos de 2 minutos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="quiz-section" style="display: none;">
+            <div class="container">
+                <div id="quiz-wrapper" class="glass-card">
+                    <!-- Progress Bar -->
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+
+                    <!-- Step 1 -->
+                    <div id="step-1" class="quiz-step active">
+                        <span class="step-count">Pergunta 1 de 6</span>
+                        <h3>Qual seu principal objetivo com drones no agro?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(2)">Conquistar uma fonte de renda extra</button>
+                            <button class="quiz-option" onclick="nextStep(2)">Mudar de profissão e entrar no mercado que mais cresce</button>
+                            <button class="quiz-option" onclick="nextStep(2)">Aumentar a produtividade da minha própria fazenda</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div id="step-2" class="quiz-step">
+                        <span class="step-count">Pergunta 2 de 6</span>
+                        <h3>Qual seu nível de experiência atual?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(3)">Totalmente iniciante (Não sei nada)</button>
+                            <button class="quiz-option" onclick="nextStep(3)">Já voei por hobby, mas não profissionalmente</button>
+                            <button class="quiz-option" onclick="nextStep(3)">Tenho alguma base e quero me especializar no agro</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div id="step-3" class="quiz-step">
+                        <span class="step-count">Pergunta 3 de 6</span>
+                        <h3>Quanto tempo você pode se dedicar para faturar com drones?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(4)">Menos de 5 horas por semana</button>
+                            <button class="quiz-option" onclick="nextStep(4)">Entre 5 e 10 horas por semana</button>
+                            <button class="quiz-option" onclick="nextStep(4)">Mais de 10 horas por semana (Dedicação total)</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div id="step-4" class="quiz-step">
+                        <span class="step-count">Pergunta 4 de 6</span>
+                        <h3>Você já possui o equipamento (drone)?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(5)">Sim, já tenho um drone</button>
+                            <button class="quiz-option" onclick="nextStep(5)">Não tenho drone, quero aprender a profissão primeiro</button>
+                            <button class="quiz-option" onclick="nextStep(5)">Não tenho, mas pretendo comprar um em breve</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div id="step-5" class="quiz-step">
+                        <span class="step-count">Pergunta 5 de 6</span>
+                        <h3>Qual sua meta de faturamento mensal no agronegócio?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="nextStep(6)">Até R$ 2.000 (Renda Extra)</button>
+                            <button class="quiz-option" onclick="nextStep(6)">De R$ 2.000 a R$ 5.000 (Profissional)</button>
+                            <button class="quiz-option" onclick="nextStep(6)">Acima de R$ 5.000 (Especialista)</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div id="step-6" class="quiz-step">
+                        <span class="step-count">Pergunta 6 de 6</span>
+                        <h3>Em qual estado você mora atualmente?</h3>
+                        <div class="quiz-options">
+                            <select id="state-select" class="quiz-select" onchange="enableNextStateBtn()">
+                                <option value="" disabled selected>Selecione seu estado...</option>
+                                <option value="Acre">Acre</option>
+                                <option value="Alagoas">Alagoas</option>
+                                <option value="Amapá">Amapá</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Bahia">Bahia</option>
+                                <option value="Ceará">Ceará</option>
+                                <option value="Distrito Federal">Distrito Federal</option>
+                                <option value="Espírito Santo">Espírito Santo</option>
+                                <option value="Goiás">Goiás</option>
+                                <option value="Maranhão">Maranhão</option>
+                                <option value="Mato Grosso">Mato Grosso</option>
+                                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                <option value="Minas Gerais">Minas Gerais</option>
+                                <option value="Pará">Pará</option>
+                                <option value="Paraíba">Paraíba</option>
+                                <option value="Paraná">Paraná</option>
+                                <option value="Pernambuco">Pernambuco</option>
+                                <option value="Piauí">Piauí</option>
+                                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                <option value="Rondônia">Rondônia</option>
+                                <option value="Roraima">Roraima</option>
+                                <option value="Santa Catarina">Santa Catarina</option>
+                                <option value="São Paulo">São Paulo</option>
+                                <option value="Sergipe">Sergipe</option>
+                                <option value="Tocantins">Tocantins</option>
+                            </select>
+                            <button id="btn-state-next" class="btn btn-primary" style="display:none; margin-top: 1rem; width: 100%;" onclick="finishQuiz()">FINALIZAR ANÁLISE</button>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div id="quiz-loading" class="quiz-step">
+                        <div class="loader-content">
+                            <div class="spinner"></div>
+                            <h3>Analisando seu perfil...</h3>
+                            <p>Cruzando dados com a demanda da sua região.</p>
+                        </div>
+                    </div>
+
+                    <!-- Result State -->
+                    <div id="quiz-result" class="quiz-step">
+                        <div class="result-header">
+                            <div class="result-badge">Resultado Disponível</div>
+                            <h2 id="result-headline">Análise Concluída!</h2>
+                            <p id="result-text" style="font-size: 1.1rem; margin-bottom: 2rem;"></p>
+                            <div class="urgency-note">
+                                <span class="icon-warning">⚠️</span>
+                                <p id="urgency-text"></p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="showOffers()">VER COMO COMEÇAR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Bridge Section -->
+        <section id="solution-bridge" class="solution-section scroll-animate-up" style="display: none;">
+            <div class="container">
+                <div class="solution-header">
+                    <span class="badge-header">A Oportunidade</span>
+                    <h2>A ponte entre você e esse faturamento</h2>
+                    <p>Você acaba de ver que existe uma demanda reprimida e um potencial lucrativo na sua região. Mas como transformar isso em dinheiro real no bolso?</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon"><img src="logo.svg" alt="Drone Agro Logo" style="width: 80px; height: 80px; object-fit: contain;"></div>
+                    <div class="solution-text">
+                        <h3>Apresentamos a Plataforma Drone Agro</h3>
+                        <p>Desenvolvemos um sistema completo focado em quem quer começar do zero. Não é apenas um curso, é um método passo a passo para você dominar a tecnologia, encontrar clientes e fechar seus primeiros serviços em tempo recorde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Video Section -->
+        <section id="preview-video" class="preview-section scroll-animate-up" style="display: none;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>O que você vai encontrar lá dentro</h2>
+                    <p>Veja uma prévia da nossa Plataforma de Estudos</p>
+                </div>
+                <div class="stories-container">
+                    <div class="stories-wrapper">
+                        <iframe src="https://www.youtube.com/embed/_RaoPdm17H0" 
+                                title="Preview Drone Agro" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="feedbacks" class="testimonials-section scroll-animate" style="display: none;">
+            <div class="container">
+                <div class="section-title scroll-animate-up">
+                    <span class="badge-header">Inovação</span>
+                    <h2>Facilite sua vida no campo</h2>
+                    <p>Veja como a tecnologia de drones transforma o trabalho pesado em lucro inteligente</p>
+                </div>
+                
+                <div class="video-grid scroll-animate-up">
+                    <div class="video-card">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/HDG2P006eLo" 
+                                    title="Drone Agro Facilitando" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p>Tecnologia que Facilita sua Vida</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-embed-wrapper">
+                            <iframe src="https://www.youtube.com/embed/oWsWb5Af9Bc" 
+                                    title="Resultado no Campo" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <p>Eficiência e Lucro no Campo</p>
+                    </div>
+                </div>
+
+                <div class="transition-bridge scroll-animate-up">
+                    <h3>Sua Vez de Faturar</h3>
+                    <p>
+                        Agora que você já viu que temos <strong>alunos faturando na prática</strong> e uma <strong>estrutura sólida</strong> rodando no campo, chegou a sua hora.
+                    </p>
+                    <p style="margin-bottom: 0;">
+                        Nós compilamos todo o nosso conhecimento prático, estratégias de prospecção e técnicas de voo em uma plataforma completa. É um <strong>resumo prático e direto</strong> de tudo o que funciona hoje, desenhado para que você não perca tempo e feche seus primeiros serviços rapidamente.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section id="offers" class="offers-section" style="display: none;">
+            <div class="container">
+                
+                <!-- Harvest Urgency Banner -->
+                <div class="harvest-banner scroll-animate-up">
+                    <div class="harvest-icon">🚜</div>
+                    <div class="harvest-text">
+                        <h3>A Safra 2026 já começou!</h3>
+                        <p>A demanda por pilotos de drone está no pico histórico. Se você começar agora, terá acesso aos meses de maior faturamento do ano.</p>
+                    </div>
+                </div>
+
+                <div class="section-title scroll-animate-up">
+                    <h2>Escolha o seu ponto de partida</h2>
+                    <p>Invista no seu futuro com drones no agronegócio</p>
+                </div>
+
+                    <!-- Plan 1 -->
+                    <div class="offer-card scroll-animate-left">
+                        <div class="card-header">
+                            <h3>Acesso Essencial Plataforma</h3>
+                            <div class="price">R$ 19,90</div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>✓ Acesso imediato à Plataforma de Estudos</li>
+                                <li>✓ Método de Introdução ao Mercado</li>
+                                <li>✓ Primeiros passos práticos</li>
+                                <li>✓ Noções básicas de operação</li>
+                            </ul>
+                        </div>
+                        <a href="https://ggcheckout.app/checkout/v2/8UwygO93xmeDIiPmPCFp" class="btn btn-outline-alt" target="_blank">Assinar Essencial</a>
+                    </div>
+
+                    <!-- Plan 2 -->
+                    <div class="offer-card featured scroll-animate-right">
+                        <div class="featured-tag">MAIS ESCOLHIDO</div>
+                        <div class="card-header">
+                            <h3>Acesso Profissional Plataforma</h3>
+                            <div class="price">R$ 27,00</div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>✓ Tudo da plataforma essencial</li>
+                                <li class="bonus-item">
+                                    <strong>+ BÔNUS EXCLUSIVO</strong>
+                                    <span>Mapa Secreto de Clientes + Guia Prático de Conversas</span>
+                                    <p>Onde encontrar clientes, como abordar e modelos prontos de venda dentro da plataforma.</p>
+                                </li>
+                                <li>✓ Guia de Prospecção Ativa</li>
+                                <li>✓ Roteiro de Conversa Irresistível</li>
+                            </ul>
+                        </div>
+                        <a href="https://ggcheckout.app/checkout/v2/h6xnLFaoMv9dilSNP1B4" class="btn btn-primary" target="_blank">ASSINAR PROFISSIONAL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo"><img src="logo.svg" alt="Drone Agro" style="height: 60px;"></div>
+                <p>O futuro da agricultura é digital. Não fique de fora.</p>
+                <div class="legal">
+                    &copy; 2026 Drone Agro. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
